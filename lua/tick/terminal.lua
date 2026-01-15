@@ -4,9 +4,6 @@ local function lock_terminal(buf)
 
 	vim.keymap.set("t", "<Esc><Esc>", "<Nop>", opts)
 	vim.keymap.set("t", "<C-\\><C-n>", "<Nop>", opts)
-
-	-- Optional: block Ctrl-C if you want full lock-in
-	-- vim.keymap.set("t", "<C-c>", "<Nop>", opts)
 end
 
 function M.open(opts)
