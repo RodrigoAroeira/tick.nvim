@@ -45,7 +45,8 @@ function M.open(opts)
 		vim.api.nvim_set_current_win(win)
 	end
 
-	vim.fn.termopen(cmd, {
+	vim.fn.jobstart(cmd, {
+		term = true,
 		on_exit = function()
 			vim.schedule(function()
 				vim.o.timeoutlen = old_timeoutlen
